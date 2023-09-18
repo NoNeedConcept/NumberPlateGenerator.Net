@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberPlateGenerator.Net.Core", "NumberPlateGenerator.Net.Core\NumberPlateGenerator.Net.Core.csproj", "{E2AEB9B2-60DE-406C-A132-C319A82AAF42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberPlateGenerator.Net.Core.Test", "NumberPlateGenerator.Net.Core.Test\NumberPlateGenerator.Net.Core.Test.csproj", "{806A941F-AE7E-4E83-8871-1066EC2904BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2AEB9B2-60DE-406C-A132-C319A82AAF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2AEB9B2-60DE-406C-A132-C319A82AAF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2AEB9B2-60DE-406C-A132-C319A82AAF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2AEB9B2-60DE-406C-A132-C319A82AAF42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806A941F-AE7E-4E83-8871-1066EC2904BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806A941F-AE7E-4E83-8871-1066EC2904BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806A941F-AE7E-4E83-8871-1066EC2904BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806A941F-AE7E-4E83-8871-1066EC2904BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E24CDE12-473F-473B-AB52-63202442898F}
+	EndGlobalSection
+EndGlobal
