@@ -8,8 +8,8 @@ variables:
   - name: vmImage
     value: ubuntu-latest
   - name: solutionPath
-    value: src/NumberPlateGenerator.Net.sln
+    value: src/Flickr.Net.sln
   - name: projectPath
-    value: src/NumberPlateGenerator.Net.Core/NumberPlateGenerator.Net.Core.csproj
+    value: src/Flickr.Net.Core/Flickr.Net.Core.csproj
   - name: internalFeedName
-    value: NumberPlateGenerator.Net/NumberPlateGenerator.Net
+    value: Flickr.Net/Flickr.Net
