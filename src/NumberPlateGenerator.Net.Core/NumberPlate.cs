@@ -1,14 +1,17 @@
-﻿namespace NumberPlateGenerator.Net.Core;
+﻿using System.Collections.Generic;
 
-public static class NumberPlate
+namespace NumberPlateGenerator.Net.Core
 {
-    private static IDictionary<NumberPlateType, object> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, object> (){
-        {NumberPlateType.Unkown, null },
-            
-    };
-
-    public static object Generate(NumberPlateType type)
+    public static class NumberPlate
     {
-        return _supportetNumberPlateTypes[type];
+        private static IDictionary<NumberPlateType, object> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, object> (){
+            {NumberPlateType.Unknown, null },
+            
+        };
+
+        public static object Generate(NumberPlateType type)
+        {
+            return _supportetNumberPlateTypes[type];
+        }
     }
 }

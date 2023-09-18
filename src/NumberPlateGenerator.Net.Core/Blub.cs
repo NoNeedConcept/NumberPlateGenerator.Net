@@ -1,6 +1,8 @@
-﻿namespace NumberPlateGenerator.Net.Core;
-
-public class Blub
+﻿namespace NumberPlateGenerator.Net.Core
 {
-    public bool GetTrue => true;
+    public class Blub
+    {
+        public bool GetTrue => true;
+    }
+
 }
