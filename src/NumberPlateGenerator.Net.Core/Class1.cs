@@ -1,7 +1,5 @@
-﻿namespace NumberPlateGenerator.Net.Core
-{
-    public class Class1
-    {
+﻿namespace NumberPlateGenerator.Net.Core;
 
-    }
+public class Class1
+{
 }
