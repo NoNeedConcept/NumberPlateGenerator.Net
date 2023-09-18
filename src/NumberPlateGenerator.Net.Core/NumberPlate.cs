@@ -2,12 +2,12 @@
 
 public static class NumberPlate
 {
-    private static IDictionary<NumberPlateType, object> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, object> (){
-        {NumberPlateType.Unkown, null },
-            
+    private static IDictionary<NumberPlateType, IGenerator> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, IGenerator> (){
+        { TestGenerator.Type , new TestGenerator() },
+        
     };
-
-    public static object Generate(NumberPlateType type)
+    
+    public static IGenerator GetGenerator(NumberPlateType type)
     {
         return _supportetNumberPlateTypes[type];
     }

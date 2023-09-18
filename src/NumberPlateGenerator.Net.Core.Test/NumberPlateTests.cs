@@ -3,8 +3,11 @@ namespace NumberPlateGenerator.Net.Core.Test;
 public class NumberPlateTests
 {
     [Fact]
-    public void Return_type_of_NumberPlate_Generate()
+    public void NumberPlate_GetGenerator()
     {
-        Assert.Null(NumberPlate.Generate(NumberPlateType.Unkown));
+        var result = NumberPlate.GetGenerator(NumberPlateType.Unkown);
+        Assert.NotNull(result);
+        Assert.IsType<TestGenerator>(result);
+        Assert.Equal(TestGenerator.Type, result.NumberPlateType);
     }
 }
