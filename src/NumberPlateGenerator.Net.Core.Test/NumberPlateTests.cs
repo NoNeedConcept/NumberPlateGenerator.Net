@@ -2,13 +2,13 @@ using Xunit;
 
 namespace NumberPlateGenerator.Net.Core.Test
 {
-    public class NumberPlateTests
+    [Fact]
+    public void NumberPlate_GetGenerator()
     {
-        [Fact]
-        public void Return_type_of_NumberPlate_Generate()
-        {
-            Assert.Null(NumberPlate.Generate(NumberPlateType.Unknown));
-        }
+        var result = NumberPlate.GetGenerator(NumberPlateType.Unkown);
+        Assert.NotNull(result);
+        Assert.IsType<TestGenerator>(result);
+        Assert.Equal(TestGenerator.Type, result.NumberPlateType);
     }
 
 }
