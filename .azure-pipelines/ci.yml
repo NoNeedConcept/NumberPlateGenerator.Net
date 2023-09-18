@@ -39,6 +39,7 @@ stages:
             inputs:
               packageType: sdk
               version: $(netSdkVersion)
+              includePreviewVersions: $(netIncludePreview)
 
           - task: DotNetCoreCLI@2
             displayName: 'Restore NuGet dependencies'
@@ -95,6 +96,7 @@ stages:
             inputs:
               packageType: sdk
               version: $(netSdkVersion)
+              includePreviewVersions: $(netIncludePreview)
 
           - task: DotNetCoreCLI@2
             displayName: 'Run unit tests'
@@ -126,11 +128,13 @@ stages:
           - checkout: none
           - download: current
             artifact: packages
+
           - task: UseDotNet@2
             displayName: Install .NET sdk
             inputs:
               packageType: sdk
               version: $(netSdkVersion)
+              includePreviewVersions: $(netIncludePreview)
               
           - task: NuGetAuthenticate@1
             displayName: 'NuGet Authenticate'
