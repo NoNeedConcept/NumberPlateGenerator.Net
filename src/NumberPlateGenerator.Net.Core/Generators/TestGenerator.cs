@@ -6,8 +6,6 @@
         {
         }
 
-         static NumberPlateType IGenerator.Type => NumberPlateType.Unkown;
-
-        NumberPlateType IGenerator.NumberPlateType => Type;
+        public NumberPlateType Type => NumberPlateType.Unknown;
     }
 }

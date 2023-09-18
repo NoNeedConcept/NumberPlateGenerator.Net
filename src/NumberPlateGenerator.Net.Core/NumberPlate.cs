@@ -4,7 +4,7 @@ using NumberPlateGenerator.Net.Core;
 public static class NumberPlate
 {
     private static IDictionary<NumberPlateType, IGenerator> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, IGenerator> (){
-        { TestGenerator.Type , new TestGenerator() },
+        { NumberPlateType.Unknown , new TestGenerator() },
         
     };
     
