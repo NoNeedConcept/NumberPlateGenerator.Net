@@ -1,10 +1,14 @@
-namespace NumberPlateGenerator.Net.Core.Test;
+using Xunit;
 
-public class BlubTest
+namespace NumberPlateGenerator.Net.Core.Test
 {
-    [Fact]
-    public void Blub()
+    public class BlubTest
     {
-        Assert.True(new Blub().GetTrue);
+        [Fact]
+        public void Blub()
+        {
+            Assert.True(new Blub().GetTrue);
+        }
     }
+
 }

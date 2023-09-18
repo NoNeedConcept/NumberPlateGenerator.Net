@@ -1,10 +1,14 @@
-namespace NumberPlateGenerator.Net.Core.Test;
+using Xunit;
 
-public class NumberPlateTests
+namespace NumberPlateGenerator.Net.Core.Test
 {
-    [Fact]
-    public void Return_type_of_NumberPlate_Generate()
+    public class NumberPlateTests
     {
-        Assert.Null(NumberPlate.Generate(NumberPlateType.Unkown));
+        [Fact]
+        public void Return_type_of_NumberPlate_Generate()
+        {
+            Assert.Null(NumberPlate.Generate(NumberPlateType.Unknown));
+        }
     }
+
 }
