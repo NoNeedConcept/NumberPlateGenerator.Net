@@ -5,6 +5,6 @@ public class BlubTest
     [Fact]
     public void Blub()
     {
-        Assert.True(true);
+        Assert.True(new Blub().GetTrue);
     }
 }
