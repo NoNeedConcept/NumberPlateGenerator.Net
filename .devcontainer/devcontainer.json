@@ -1,5 +1,5 @@
 {
-	"name": "Flickr.Net",
+	"name": "NumberPlateGenerator.Net",
 	"service": "devhost",
 	"remoteUser": "root",
 	"postCreateCommand": "sh ./.devcontainer/postCreateCommand.sh",
