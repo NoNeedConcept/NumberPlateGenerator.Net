@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NumberPlateGenerator.Net.Core;
 
 public static class NumberPlate
 {
