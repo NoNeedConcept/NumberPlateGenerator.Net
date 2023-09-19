@@ -1,3 +1,4 @@
+using NumberPlateGenerator.Net.Core.Generators;
 using Xunit;
 
 namespace NumberPlateGenerator.Net.Core.Test
