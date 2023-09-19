@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices.ComTypes;
+using NumberPlateGenerator.Net.Core.Generators;
 
 namespace NumberPlateGenerator.Net.Core
 {

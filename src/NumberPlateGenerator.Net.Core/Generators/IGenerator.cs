@@ -6,4 +6,5 @@
 
         ILicensePlate<TSettings> Generate<TSettings>(TSettings settings) where TSettings : ISettings;
     }
+
 }

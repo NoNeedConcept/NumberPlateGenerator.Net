@@ -2,6 +2,12 @@
 {
     public class GermanLicenseGenerator : IGenerator
     {
-        public NumberPlateType Type => NumberPlateType.Germany;
+        public Countries Type => Countries.DE;
+
+        public ILicensePlate<TSettings> Generate<TSettings>(TSettings settings) where TSettings : ISettings
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }
