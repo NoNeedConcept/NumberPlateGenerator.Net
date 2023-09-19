@@ -3,7 +3,7 @@
 namespace NumberPlateGenerator.Net.Core
 {
     [Flags]
-    public enum NumberPlateType : int
+    public enum Countries : int
     {
         Unknown = 0,
 

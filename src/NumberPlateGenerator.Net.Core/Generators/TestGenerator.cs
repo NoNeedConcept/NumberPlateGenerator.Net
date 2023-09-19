@@ -8,7 +8,7 @@ namespace NumberPlateGenerator.Net.Core
         {
         }
 
-        public NumberPlateType Type => NumberPlateType.Unknown;
+        public Countries Type => Countries.Unknown;
 
         public ILicensePlate<TSettings> Generate<TSettings>(TSettings settings) where TSettings : ISettings
         {

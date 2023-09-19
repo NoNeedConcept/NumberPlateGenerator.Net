@@ -7,10 +7,10 @@ namespace NumberPlateGenerator.Net.Core.Test
         [Fact]
         public void NumberPlateTest()
         {
-            var result = NumberPlate.GetGenerator(NumberPlateType.Unknown);
+            var result = NumberPlate.GetGenerator(Countries.Unknown);
             Assert.NotNull(result);
             Assert.IsType<TestGenerator>(result);
-            Assert.Equal(NumberPlateType.Unknown, result.Type);
+            Assert.Equal(Countries.Unknown, result.Type);
         }
     }
 }

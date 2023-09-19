@@ -1,6 +1,6 @@
 ﻿namespace NumberPlateGenerator.Net.Core
 {
-    public class TestSettings : SettingsBase<NumberPlateType>
+    public class TestSettings : SettingsBase<Countries>
     {
     }
 }
