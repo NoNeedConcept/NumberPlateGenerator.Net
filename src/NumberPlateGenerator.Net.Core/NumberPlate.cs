@@ -5,13 +5,14 @@ using NumberPlateGenerator.Net.Core.Generators;
 namespace NumberPlateGenerator.Net.Core
 {
 
-    public class NUmberPlate{
-        private IDictionary<Countries, IGenerator> _supportetNumberPlateTypes = new Dictionary<Countries, IGenerator> (){
+    public class NumberPlate{
+        
+        private IDictionary<Countries, IGenerator> _supportedNumberPlateTypes = new Dictionary<Countries, IGenerator> (){
             { Countries.Unknown , new TestGenerator() },
             
         };
         
-        public IGenerator GetGenerator(Countries type)
+        public static IGenerator GetGenerator(Countries type)
         {
 
                 return new TestGenerator();

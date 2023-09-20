@@ -1,8 +1,8 @@
 ﻿namespace NumberPlateGenerator.Net.Core.Generators
 {
-    public class GermanLicenseGenerator : IGenerator
+    public class DLicenseGenerator : IGenerator
     {
-        public Countries Type => Countries.DE;
+        public Countries Type => Countries.D;
 
         public ILicensePlate<TSettings> Generate<TSettings>(TSettings settings) where TSettings : ISettings
         {
