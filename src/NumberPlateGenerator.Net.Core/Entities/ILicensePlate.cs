@@ -2,21 +2,22 @@
 
 namespace NumberPlateGenerator.Net.Core
 {
-    public interface ILicensePlate<TSettings> where TSettings : ISettings
+    public interface ILicensePlate
     {
         string Text { get; }
-
-        TSettings Settings { get; }
-
     }
 
-    public abstract class LicensePlateBase<TSettings, TProvinceEnum> : ILicensePlate<TSettings> where TSettings : SettingsBase<TProvinceEnum> where TProvinceEnum : Enum
+    public abstract class LicensePlateBase<TSettings, TProvince> : ILicensePlate where TSettings : SettingsBase<TProvince> where TProvince : Enum
     {
         protected LicensePlateBase()
         { }
 
         public virtual string Text { get; protected set; } = string.Empty;
-        public virtual TProvinceEnum PlateType { get; protected set; } = default;
+        public virtual TProvince PlateType { get; protected set; } = default;
         public virtual TSettings Settings { get; protected set; } = default;
+
+        public static implicit operator string(LicensePlateBase<TSettings, TProvince> license) => license.Text;
+
+        public override string ToString() => Text;
     }
 }
