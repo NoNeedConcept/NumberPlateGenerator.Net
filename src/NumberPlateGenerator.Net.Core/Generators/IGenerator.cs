@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace NumberPlateGenerator.Net.Core
+namespace NumberPlateGenerator.Net.Core.Generators
 {
     public interface IGenerator
     {
@@ -17,4 +17,5 @@ namespace NumberPlateGenerator.Net.Core
 
         public ILicensePlate Generate(ISettings settings) => Generate(settings);
     }
+
 }

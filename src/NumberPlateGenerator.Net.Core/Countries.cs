@@ -1,9 +1,9 @@
-﻿﻿using System;
+using System;
 
 namespace NumberPlateGenerator.Net.Core
 {
     [Flags]
-    public enum Countries : int
+    public enum Countries
     {
         Unknown = 0,
 

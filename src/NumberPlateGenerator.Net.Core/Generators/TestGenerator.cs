@@ -1,4 +1,4 @@
-﻿namespace NumberPlateGenerator.Net.Core
+namespace NumberPlateGenerator.Net.Core
 {
     public class TestGenerator : GeneratorBase<TestLicensePlate, TestProvince, TestSettings>
     {
