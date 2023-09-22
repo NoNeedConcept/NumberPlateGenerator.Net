@@ -4,7 +4,7 @@ namespace NumberPlateGenerator.Net.Core
 {
     public interface ISettings
     {
-        int ProvinceAsInt { get; }
+        
     }
 
 
@@ -14,7 +14,5 @@ namespace NumberPlateGenerator.Net.Core
         { }
 
         public virtual TProvinceEnum Province { get; protected set; }
-
-        public int ProvinceAsInt => Convert.ToInt32(Province);
     }
 }
