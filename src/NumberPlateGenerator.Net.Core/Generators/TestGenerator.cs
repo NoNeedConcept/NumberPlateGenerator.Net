@@ -8,10 +8,7 @@
 
         public override TestLicensePlate Generate(TestSettings settings)
         {
-            
-            
             return default;
-
         }
     }
 }

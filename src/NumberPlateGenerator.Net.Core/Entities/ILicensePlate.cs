@@ -13,11 +13,9 @@ namespace NumberPlateGenerator.Net.Core
         { }
 
         public virtual string Text { get; protected set; } = string.Empty;
-        public virtual TProvince PlateType { get; protected set; } = default;
         public virtual TSettings Settings { get; protected set; } = default;
-
+        
         public static implicit operator string(LicensePlateBase<TSettings, TProvince> license) => license.Text;
-
         public override string ToString() => Text;
     }
 }
