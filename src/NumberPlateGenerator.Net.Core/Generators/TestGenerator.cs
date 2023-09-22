@@ -1,3 +1,5 @@
+using NumberPlateGenerator.Net.Core.Generators;
+
 namespace NumberPlateGenerator.Net.Core
 {
     public class TestGenerator : GeneratorBase<TestLicensePlate, TestProvince, TestSettings>

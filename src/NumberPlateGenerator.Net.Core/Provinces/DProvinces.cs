@@ -1,5 +1,8 @@
-﻿namespace NumberPlateGenerator.Net.Core.Provinces
+﻿using System;
+
+namespace NumberPlateGenerator.Net.Core.Provinces
 {
+    [Flags]
     public enum DProvinces
     {
         A, //Augsburg

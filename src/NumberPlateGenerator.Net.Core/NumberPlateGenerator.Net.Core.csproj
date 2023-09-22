@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Folder Include="LicensePlates/" />
->>>>>>> 5959cca (refactoring)
     <Folder Include="Provinces/" />
     <Folder Include="States/" />
   </ItemGroup>

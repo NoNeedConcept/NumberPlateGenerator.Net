@@ -1,12 +1,12 @@
-﻿namespace NumberPlateGenerator.Net.Core.Generators
-{
-    public class DLicenseGenerator : IGenerator
-    {
-        public Countries Type => Countries.D;
+﻿using NumberPlateGenerator.Net.Core.Provinces;
 
-        public ILicensePlate<TSettings> Generate<TSettings>(TSettings settings) where TSettings : ISettings
+namespace NumberPlateGenerator.Net.Core.Generators
+{
+    public class DLicenseGenerator : GeneratorBase<DLicensePlate, DProvinces, DSettings>
+    {
+        public override DLicensePlate Generate(DSettings settings)
         {
-            throw new System.NotImplementedException();
+            return default;
         }
 
     }
