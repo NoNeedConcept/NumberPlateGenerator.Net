@@ -3,10 +3,7 @@
 namespace NumberPlateGenerator.Net.Core
 {
     public interface ISettings
-    {
-        
-    }
-
+    { }
 
     public abstract class SettingsBase<TProvinceEnum> : ISettings where TProvinceEnum : Enum
     {

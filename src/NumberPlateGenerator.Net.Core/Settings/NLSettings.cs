@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace NumberPlateGenerator.Net.Core
+﻿namespace NumberPlateGenerator.Net.Core
 {
-    public class NLSettings : SettingsBase<TestProvince>
+    public class NLSettings : SettingsBase<NLProvinces>
     {
-
+        public NLSettings()
+        { }
     }
 }

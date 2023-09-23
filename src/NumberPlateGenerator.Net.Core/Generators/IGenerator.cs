@@ -15,7 +15,7 @@ namespace NumberPlateGenerator.Net.Core.Generators
 
         public abstract TLicensePlate Generate(TSettings settings);
 
-        public ILicensePlate Generate(ISettings settings) => Generate(settings);
+        public ILicensePlate Generate(ISettings settings) => Generate(settings as SettingsBase<TProvince>);
     }
 
 }

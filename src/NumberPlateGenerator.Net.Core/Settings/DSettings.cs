@@ -1,5 +1,4 @@
-﻿using System;
-using NumberPlateGenerator.Net.Core.Provinces;
+﻿using NumberPlateGenerator.Net.Core.Provinces;
 
 namespace NumberPlateGenerator.Net.Core
 {

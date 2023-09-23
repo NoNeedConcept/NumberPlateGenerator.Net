@@ -3,7 +3,7 @@
 namespace NumberPlateGenerator.Net.Core
 {
     [Flags]
-    public enum NLProvinces
+    public enum NLProvinces : short
     {
         Unknown = 0,
         Groningen = 1 << 0,

@@ -7,6 +7,7 @@ namespace NumberPlateGenerator.Net.Core
     {
         public DLicensePlate()
         {
+            
         }
     }
 }
