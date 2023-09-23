@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NumberPlateGenerator.Net.Core
+namespace NumberPlateGenerator.Net.Core.Provinces
 {
     [Flags]
     public enum NLProvinces : short
