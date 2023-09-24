@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
-using NumberPlateGenerator.Net.Core;
+using NumberPlateGenerator.Net.Core.Generators;
 
-public static class NumberPlate
+namespace NumberPlateGenerator.Net.Core
 {
-    private static IDictionary<NumberPlateType, IGenerator> _supportetNumberPlateTypes = new Dictionary<NumberPlateType, IGenerator> (){
-        { NumberPlateType.Unknown , new TestGenerator() },
-        
-    };
-    
-    public static IGenerator GetGenerator(NumberPlateType type)
+
+    public class NumberPlate
     {
-        return _supportetNumberPlateTypes[type];
+
+        private static IDictionary<Countries, IGenerator> _supportedNumberPlateTypes = new Dictionary<Countries, IGenerator>(){
+            { Countries.NL , new NLGenerator() },
+            { Countries.D , new DGenerator() },
+
+        };
+
+        public static IGenerator GetGenerator(Countries type) => _supportedNumberPlateTypes[type];
     }
 }
