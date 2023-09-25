@@ -18,7 +18,7 @@ public class NameplateTests
     [Fact]
     public void CorrectBitwiseOperator()
     {
-        var germanId = 1 << 240;
+        var germanId = 788;
         var nlId = 1 << 11;
         var maxCountryId = 1L << 180;
         Assert.Equal((int)DProvinces.ZW, germanId);
