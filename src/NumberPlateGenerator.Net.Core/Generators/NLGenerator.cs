@@ -15,7 +15,7 @@ namespace NumberPlateGenerator.Net.Core
 
         public override NLLicensePlate Generate(NLSettings settings)
         {
-            throw new NotImplementedException();
+            return default;
         }
     }
 }
