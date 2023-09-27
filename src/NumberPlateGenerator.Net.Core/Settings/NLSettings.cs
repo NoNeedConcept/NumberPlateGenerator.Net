@@ -1,4 +1,5 @@
-﻿using NumberPlateGenerator.Net.Core.Provinces;
+﻿using NumberPlateGenerator.Net.Core.CustomTypes;
+using NumberPlateGenerator.Net.Core.Provinces;
 
 namespace NumberPlateGenerator.Net.Core.Settings
 {
@@ -10,7 +11,8 @@ namespace NumberPlateGenerator.Net.Core.Settings
         { }
     }
 
-    public class NLSettingsBuilder{
+    public class NLSettingsBuilder : SettingsBuilderBase<NLSettings>
+    {
 
         private readonly NLSettings _nlSettings = new NLSettings();
 
@@ -20,5 +22,7 @@ namespace NumberPlateGenerator.Net.Core.Settings
             _nlSettings.TimeRange = range;
             return this;
         }
+
+        public override NLSettings Build() => _nlSettings;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using NumberPlateGenerator.Net.Core.CustomTypes;
 using NumberPlateGenerator.Net.Core.Settings;
 
 namespace NumberPlateGenerator.Net.Core
