@@ -1,6 +1,4 @@
-﻿using NumberPlateGenerator.Net.Core.Settings;
-
-namespace NumberPlateGenerator.Net.Core
+﻿namespace NumberPlateGenerator.Net.Core.Settings
 {
     public abstract class SettingsBuilderBase<TSettings>  where TSettings : ISettings
     {
