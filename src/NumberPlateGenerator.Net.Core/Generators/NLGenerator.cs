@@ -6,16 +6,16 @@ using NumberPlateGenerator.Net.Core.Settings;
 
 namespace NumberPlateGenerator.Net.Core
 {
-    public class NLGenerator : GeneratorBase<NLLicensePlate, NLProvinces, NLSettings>
+    public class NLGenerator : GeneratorBase<NLLicensePlate, NLProvinces, NLSettings, NLSettingsBuilder>
     {
         public NLGenerator()
         {
             Type = Countries.NL;
         }
 
-        public override NLLicensePlate Generate(NLSettings settings)
+        public override NLLicensePlate Generate(Func<NLSettingsBuilder, NLSettings> settings)
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }
