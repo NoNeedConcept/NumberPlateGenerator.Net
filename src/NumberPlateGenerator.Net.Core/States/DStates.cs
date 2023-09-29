@@ -1,6 +1,9 @@
-﻿namespace NumberPlateGenerator.Net.Core.States
+﻿using System;
+
+namespace NumberPlateGenerator.Net.Core.States
 {
-    public enum DStates
+    [Flags]
+    public enum DStates : short
     {
         Unknown = 0,
         Hamburg = 1 << 0,
