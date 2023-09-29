@@ -7,9 +7,6 @@
   <ItemGroup>
     <Folder Include="Provinces/" />
     <Folder Include="States/" />
-    <Folder Include="Generators" />
-    <Folder Include="Settings" />
-    <Folder Include="LicensePlates" />
   </ItemGroup>
 
 </Project>
