@@ -8,16 +8,6 @@ namespace NumberPlateGenerator.Net.Core.Generators
     {
         Countries Type { get; }
 
-        ILicensePlate Generate(ISettings settings);
+        ILicensePlate Generate<TSettings>(Func<SettingsBuilderBase<TSettings>, TSettings> configure) where TSettings : ISettings, new();
     }
-
-    public abstract class GeneratorBase<TLicensePlate, TProvince, TSettings> : IGenerator where TSettings : SettingsBase<TProvince> where TLicensePlate : LicensePlateBase<TSettings, TProvince>, new() where TProvince : Enum
-    {
-        public Countries Type { get; protected set; }
-
-        public abstract TLicensePlate Generate(TSettings settings);
-
-        public ILicensePlate Generate(ISettings settings) => Generate(settings as SettingsBase<TProvince>);
-    }
-
 }
