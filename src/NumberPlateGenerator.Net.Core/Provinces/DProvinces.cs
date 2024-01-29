@@ -2,251 +2,797 @@
 
 namespace NumberPlateGenerator.Net.Core.Provinces
 {
-    [Flags]
-    public enum DProvinces : int
+    public enum DProvinces
     {
         Unknown = 0,
-        A = 1 << 0, //Augsburg
-        ABI = 1 << 1, //Anhalt,//Bitterfeld
-        AB = 1 << 2, //Aschaffenburg
-        AIC = 1 << 3, //Aichach,//Friedberg
-        AS = 1 << 3, //Amberg
-        AT = 1 << 4, //Altentreptow
-        AÖ = 1 << 5, //Altötting
-        B = 1 << 6, //Berlin
-        BIT = 1 << 7, //Bitburg,//Prüm
-        BIR = 1 << 8, //Birkenfeld
-        BN = 1 << 9, //Bonn
-        BO = 1 << 10, //Bochum
-        BOR = 1 << 11, //Borken
-        BRK = 1 << 12, //Landkreis Bad Kissingen
-        BT = 1 << 13, //Bayreuth
-        BU = 1 << 14, //Burghausen
-        BÜZ = 1 << 15, //Bützow
-        CE = 1 << 16, //Celle
-        C = 1 << 17, //Chemnitz
-        COC = 1 << 18, //Cochem,//Zell
-        COE = 1 << 19, //Coesfeld
-        DA = 1 << 20, //Darmstadt
-        DAU = 1 << 21, //Daun
-        DN = 1 << 22, //Düren
-        DGF = 1 << 23, //Dingolfing,//Landau
-        DÜW = 1 << 24, //Bad Dürkheim
-        DS = 1 << 25, //Dessau,//Roßlau
-        DD = 1 << 26, //Dresden
-        E = 1 << 27, //Essen
-        EA = 1 << 28, //Ilm,//Kreis
-        EBE = 1 << 29, //Ebersberg
-        ED = 1 << 30, //Erding
-        EDW = 1 << 31, //Elbe,//Weser
-        EF = 1 << 32, //Erfurt
-        ES = 1 << 33, //Esslingen
-        F = 1 << 34, //Frankfurt
-        FFB = 1 << 35, //Fürstenfeldbruck
-        FF = 1 << 36, //Frankfurt (Oder)
-        FRG = 1 << 37, //Freyung,//Grafenau
-        FY = 1 << 38, //Friesland (Netherlands)
-        G = 1 << 39, //Göttingen
-        GER = 1 << 40, //Gerolstein
-        GI = 1 << 41, //Gießen
-        GTH = 1 << 42, //Gotha
-        GÖ = 1 << 43, //Göttingen
-        GÖD = 1 << 44, //Görlitz
-        H = 1 << 45, //Hanover (Hannover)
-        HAM = 1 << 46, //Hamm
-        HD = 1 << 47, //Heidelberg
-        HIG = 1 << 48, //Werra,//Meißner,//Kreis
-        HSK = 1 << 49, //Hochsauerlandkreis
-        HX = 1 << 50, //Höxter
-        HST = 1 << 51, //Rostock
-        IN = 1 << 52, //Ingolstadt
-        KA = 1 << 53, //Karlsruhe
-        KH = 1 << 54, //Bad Kreuznach
-        KL = 1 << 55, //Kaiserslautern
-        K = 1 << 56, //Cologne (Köln)
-        KLE = 1 << 57, //Kleve
-        KIB = 1 << 58, //Kaiserslautern
-        KK = 1 << 59, //Kerkrade (Netherlands)
-        KM = 1 << 60, //Kamenz
-        KO = 1 << 61, //Koblenz
-        KÖZ = 1 << 62, //Kötzting
-        KP = 1 << 63, //Kempten (Allgäu)
-        KUS = 1 << 64, //Kusel
-        L = 1 << 65, //Leipzig
-        LAI = 1 << 66, //Landau in der Pfalz
-        LB = 1 << 67, //Ludwigsburg
-        LIP = 1 << 68, //Lippe
-        LL = 1 << 69, //Landsberg am Lech
-        LU = 1 << 70, //Ludwigshafen
-        LUP = 1 << 71, //Ludwigslust,//Parchim
-        LS = 1 << 72, //Lüdenscheid
-        M = 1 << 73, //Munich (München)
-        MA = 1 << 74, //Mannheim
-        MEK = 1 << 75, //Saale,//Orla,//Kreis
-        MG = 1 << 76, //Mönchengladbach
-        MKK = 1 << 77, //Main,//Kinzig,//Kreis
-        MTK = 1 << 78, //Main,//Taunus,//Kreis
-        MS = 1 << 79, //Münster
-        MSE = 1 << 80, //Müritz
-        NU = 1 << 81, //Neuburg,//Schrobenhausen
-        NVP = 1 << 82, //Neustadt an der Waldnaab
-        NWM = 1 << 83, //Nordwestmecklenburg
-        NZ = 1 << 84, //Neustrelitz
-        OA = 1 << 85, //Garmisch,//Partenkirchen
-        OAL = 1 << 86, //Ostallgäu
-        OB = 1 << 87, //Oberhausen
-        OBG = 1 << 88, //Oberhavel
-        OC = 1 << 89, //Oberspreewald,//Lausitz
-        OD = 1 << 90, //Oder,//Spree
-        OE = 1 << 91, //Olpe
-        OF = 1 << 92, //Offenbach am Main
-        OG = 1 << 93, //Ortenaukreis
-        OH = 1 << 94, //Stormarn (Germany)
-        OHA = 1 << 95, //Osterode am Harz
-        OHV = 1 << 96, //Oberhavel
-        OHZ = 1 << 97, //Osterholz
-        OK = 1 << 98, //Saalekreis
-        OL = 1 << 99, //Oldenburg (Oldb)
-        OP = 1 << 100, //Ober,//Pfalz (Germany)
-        OS = 1 << 101, //Osnabrück
-        OSL = 1 << 102, //Oberspreewald,//Lausitz
-        OVI = 1 << 103, //Ostvorpommern
-        OVP = 1 << 104, //Ostvorpommern
-        OZ = 1 << 105, //Ludwigslust,//Parchim
-        P = 1 << 106, //Potsdam
-        PA = 1 << 107, //Passau
-        PAF = 1 << 108, //Pfaffenhofen
-        PAN = 1 << 109, //Passau
-        PB = 1 << 110, //Paderborn
-        PCH = 1 << 111, //Ludwigslust,//Parchim
-        PE = 1 << 112, //Peine
-        PI = 1 << 113, //Starnberg
-        PL = 1 << 114, //Potsdam
-        PLÖ = 1 << 115, //Ploen
-        PM = 1 << 116, //Potsdam,//Mittelmark
-        PR = 1 << 117, //Prignitz
-        PS = 1 << 118, //Pirmasens
-        PW = 1 << 119, //Pw
-        R = 1 << 120, //Regensburg
-        RA = 1 << 121, //Ravensburg
-        RD = 1 << 122, //Rendsburg,//Eckernförde
-        RDG = 1 << 123, //Rostock
-        RE = 1 << 124, //Recklinghausen
-        REG = 1 << 125, //Regen
-        REM = 1 << 126, //Rems,//Murr,//Kreis
-        RES = 1 << 127, //Augsburg
-        RG = 1 << 128, //Rosenheim
-        RH = 1 << 129, //Rhein,//Hunsrück,//Kreis
-        RHE = 1 << 130, //Rhein,//Erft,//Kreis
-        RI = 1 << 131, //Rheinisch,//Bergischer Kreis
-        RIE = 1 << 132, //Riesa,//Großenhain
-        RO = 1 << 133, //Rosenheim
-        ROW = 1 << 134, //Rotenburg (Wümme)
-        RPL = 1 << 135, //Rheinland,//Pfalz
-        RÜD = 1 << 136, //Marburg,//Biedenkopf
-        RÜG = 1 << 137, //Rügen
-        RV = 1 << 138, //Ravensburg
-        RW = 1 << 139, //Rheinland,//Pfalz
-        RZ = 1 << 140, //Rendsburg
-        S = 1 << 141, //Stuttgart
-        SAD = 1 << 142, //Schwandorf
-        SAK = 1 << 143, //Saalekreis
-        SAN = 1 << 144, //Wunsiedel im Fichtelgebirge
-        SB = 1 << 145, //Saarbrücken
-        SBG = 1 << 146, //Saarburg
-        SBN = 1 << 147, //Saarburg
-        SBÜ = 1 << 148, //Saarburg
-        SC = 1 << 149, //Schwarzwald,//Baar,//Kreis
-        SDH = 1 << 150, //Suhl
-        SE = 1 << 151, //Segeberg
-        SEG = 1 << 152, //Stendal
-        SEK = 1 << 153, //Salzlandkreis
-        SEL = 1 << 154, //Seelow
-        SFA = 1 << 155, //Saalfeld,//Rudolstadt
-        SG = 1 << 156, //Sangerhausen
-        SGH = 1 << 157, //Saalekreis
-        SH = 1 << 158, //Schleswig,//Holstein
-        SHA = 1 << 159, //Schwäbisch Hall
-        SHL = 1 << 160, //Suhl
-        SI = 1 << 161, //Siegen
-        SIG = 1 << 162, //Sigmaringen
-        SIM = 1 << 163, //Simmern
-        SL = 1 << 164, //Saarlouis
-        SLS = 1 << 165, //Saarlouis
-        SLÜ = 1 << 166, //Schleiz
-        SM = 1 << 167, //Schmölln
-        SN = 1 << 168, //Schwerin
-        SO = 1 << 169, //Solingen
-        SOK = 1 << 170, //Saale,//Orla,//Kreis
-        SON = 1 << 171, //Sonneberg
-        SP = 1 << 172, //Speyer
-        SPN = 1 << 173, //Spree,//Neiße
-        SR = 1 << 174, //Straubing
-        SRB = 1 << 175, //Straubing
-        SRO = 1 << 176, //Saalfeld,//Rudolstadt
-        ST = 1 << 177, //Stendal
-        STA = 1 << 178, //Starnberg
-        STL = 1 << 179, //Stollberg
-        SU = 1 << 180, //Rhein,//Sieg,//Kreis
-        SW = 1 << 181, //Schwerin
-        SWA = 1 << 182, //Schwabach
-        SWK = 1 << 183, //Saale,//Orla,//Kreis
-        SWS = 1 << 184, //Saarwellingen
-        SY = 1 << 185, //Schmölln
-        TBB = 1 << 186, //Main,//Tauber,//Kreis
-        TE = 1 << 187, //Tecklenburg
-        THL = 1 << 188, //Thuringia
-        TIR = 1 << 189, //Tirschenreuth
-        TO = 1 << 190, //Torgau
-        TÖL = 1 << 191, //Bad Tölz,//Wolfratshausen
-        TR = 1 << 192, //Trier
-        TUT = 1 << 193, //Tuttlingen
-        UE = 1 << 194, //Uelzen
-        UER = 1 << 195, //Uecker,//Randow
-        UFF = 1 << 196, //Uffenheim
-        UG = 1 << 197, //St. Georgen im Schwarzwald
-        UL = 1 << 198, //Ulm
-        UM = 1 << 199, //Unna
-        UN = 1 << 200, //Unna
-        USI = 1 << 201, //Usti nad Orlici
-        V = 1 << 202, //Vogtlandkreis
-        VER = 1 << 203, //Verden
-        VG = 1 << 204, //Völklingen
-        VIB = 1 << 205, //Vogtlandkreis
-        VIE = 1 << 206, //Viersen
-        VK = 1 << 207, //Völklingen
-        VR = 1 << 208, //Vorpommern,//Rügen
-        VW = 1 << 209, //Vilseck
-        W = 1 << 210, //Wesel
-        WAF = 1 << 211, //Warendorf
-        WB = 1 << 212, //Wittenberg
-        WBS = 1 << 213, //Wittenberg
-        WEN = 1 << 214, //Weiden
-        WER = 1 << 215, //Wertingen
-        WES = 1 << 216, //Wesel
-        WF = 1 << 217, //Wolfenbüttel
-        WHV = 1 << 218, //Wilhelmshaven
-        WI = 1 << 219, //Wiesbaden
-        WK = 1 << 220, //Wittenberg
-        WL = 1 << 221, //Ludwigslust,//Parchim
-        WM = 1 << 222, //Weilheim
-        WND = 1 << 223, //St. Wendel
-        WO = 1 << 224, //Wolfenbüttel
-        WOB = 1 << 225, //Wolfsburg
-        WST = 1 << 226, //Nordwestmecklenburg
-        WT = 1 << 227, //Rastatt
-        WUG = 1 << 228, //Weißenburg,//Gunzenhausen
-        WÜ = 1 << 229, //Würzburg
-        WUN = 1 << 230, //Wunsiedel im Fichtelgebirge
-        WUR = 1 << 231, //Bad Wurzach
-        WW = 1 << 232, //Westerwaldkreis
-        WZ = 1 << 233, //Weilheim,//Schongau
-        WZL = 1 << 234, //Weilheim,//Schongau
-        Z = 1 << 235, //Zwickau
-        ZE = 1 << 236, //Zerbst
-        ZI = 1 << 237, //Zittau
-        ZIG = 1 << 238, //Zittau
-        ZP = 1 << 239, //Zschopau
-        ZW = 1 << 240, //Zweiwbrücken
+        O, //Diplomatic vehicles
+        AD, //US Military Vehicles in Germany
+        A, //Augsburg, Bavaria
+        AA, //Aalen & Ostalbkreis, Baden-Württemberg
+        AB, //Aschaffenburg, Bavaria
+        ABG, //Altenburger Land, Thuringia
+        AC, //Aachen, North-Rhine-Westphalia
+        AH, //Ahaus, North-Rhine-Westphalia
+        AIB, //Bad Aibling, Bavaria
+        AIC, //Aichach-Friedberg, Bavaria
+        AE, //Auerbach, Saxony
+        AK, //Altenkirchen (Westerwald), Rhineland Palatinate
+        AL, //Altena, North-Rhine-Westphalia
+        ALF, //Alfeld, Lower Saxony
+        ALS, //Alsfeld, Hesse
+        ALZ, //Alzenau, Bavaria
+        AM, //Amberg, Bavaria
+        AN, //Ansbach, Bavaria
+        ANA, //Annaberg-Buchholz, Saxony
+        ANG, //Angermünde, Brandenburg
+        ANK, //Anklam, Mecklenburg-Vorpommern
+        AÖ, //Altötting, Bavaria
+        AP, //Apolda & Weimarer Land, Thuringia
+        APD, //Apolda, Thuringia
+        AR, //Arnsberg, North-Rhine-Westphalia
+        ARN, //Arnstadt, Thuringia
+        ART, //Artern, Thuringia
+        AS, //Amberg-Sulzbach, Bavaria
+        ASD, //Aschendorf, Lower Saxony
+        ASL, //Aschersleben-Staßfurter Landkreis, Saxony-Anhalt
+        ASZ, //Aue-Schwarzenberg, Saxony
+        AT, //Alten-Treptow, Mecklenburg-Vorpommern
+        AU, //Aue, Saxony
+        AUR, //Aurich, Lower Saxony
+        AW, //Ahrweiler, Rhineland Palatinate
+        AZ, //Alzey-Worms, Rhineland Palatinate
+        AZE, //Anhalt-Zerbst, Saxony-Anhalt
+        B, //Berlin
+        BA, //Bamberg, Bavaria
+        BAD, //Baden-Baden, Baden-Württemberg
+        BAR, //Barnim (Eberswalde), Brandenburg
+        BB, //Böblingen, Baden-Württemberg
+        BBG, //Bernburg, Saxony-Anhalt
+        BBL, //Brandenburg Land official vehicles
+        BC, //Biberach, Baden-Württemberg
+        BCH, //Buchen, Baden-Württemberg
+        BD, //Federal German government vehicles
+        BE, //Bechum, North-Rhine-Westphalia
+        BED, //Brand-Erbisdorf, Saxony
+        BEI, //Beilingries, Bavaria
+        BEL, //Blezig, Brandenburg
+        BER, //Bernau, Brandenburg
+        BF, //Burgsteinfurt, North-Rhine-Westphalia
+        BG, //Border police vehicles
+        BGD, //Berchtesgaden, Bavaria
+        BGL, //Berchtesgardener Land, Bavaria
+        BH, //Bühl, Baden-Württenmberg
+        BI, //Bielefeld, North-Rhine-Westphalia
+        BID, //Biedenkopf, Hesse
+        BIN, //Bingen, Rhineland Palatinate
+        BIR, //Birkenfeld, Rhineland Palatinate
+        BIT, //Bitburg-Prüm, Rhineland Palatinate
+        BIW, //Bischofswerda, Saxony
+        BK, //Bicknang, Baden-Württemberg
+        BKS, //Bernkastel, Rhineland Palatinate
+        BL, //Balingen & Zollernalbkreis, Baden-Württemberg
+        BLB, //Bad Berleburg, North-Rhine-Westphalia
+        BLK, //Burgenlandkreis, Saxony-Anhalt
+        BM, //Bergheim & Erftkreis, North-Rhine-Westphalia
+        BN, //Bonn, North-Rhine-Westphalia
+        BNA, //Borna, Saxony
+        BO, //Bochum, North-Rhine-Westphalia
+        BÖ, //Bördekreis, Saxony-Anhalt
+        BOG, //Bogen, Bavaria
+        BOH, //Bocholt, North-Rhine-Westphalia
+        BOR, //Borken, North-Rhine-Westphalia
+        BOT, //Bottrop, North-Rhine-Westphalia
+        BP, //Postal authority vehicles (Bundespost)
+        BR, //Bruchsal, Baden-Württemberg
+        BRA, //Brake (Unterweser) & Wesermarsch, Lower Saxony
+        BRB, //Brandenburg, Brandenburg
+        BRG, //Burg, Saxony-Anhalt
+        BRI, //Brilon, North-Rhine-Westphalia
+        BRK, //Bad Brückenau, Bavaria
+        BRL, //Braunlage, Lower Saxony
+        BRV, //Bremervörde, Lower Saxony
+        BS, //Brunswick (Braunschweig), Lower Saxony
+        BSB, //Bersenbrück, Lower Saxony
+        BSK, //Beeskow, Brandenburg
+        BT, //Bayreuth, Bavaria
+        BTF, //Bitterfeld, Saxony-Anhalt
+        BU, //Burgdorf, Lower Saxony
+        BÜD, //Büdingen, Hesse
+        BUL, //Burglengenfeld, Bavaria
+        BUR, //Buren, North-Rhine-Westphalia
+        BÜS, //Büsingen & Konstanz, Baden-Württemberg
+        BÜZ, //Bützow, Mecklenburg-Vorpommern
+        BW, //Maritime authority vehicles
+        BWL, //Badem-Württemberg Land official vehicles
+        BYL, //Bavaria State (Bayern Land) official vehicles
+        BZ, //Bautzen, Saxony
+        BZA, //Bergzabern, Rhineland Palatinate
+        C, //Chemnitz, Saxony
+        CA, //Calau, Brandenburg
+        CAS, //Castrop-Rauxel, North-Rhine-Westphalia
+        CB, //Cottbus, Brandenburg
+        CE, //Celle, Lower Saxony
+        CHA, //Cham, Bavaria
+        CHL, //Chemnitzer Land, Kreis Glochau, Saxony
+        CLP, //Cloppenburg, Lower Saxony
+        CLZ, //Clausthal-Zellerfeld, Lower Saxony
+        CO, //Coburg, Bavaria
+        COC, //Cochem-Zell, Rhineland Palatinate
+        COE, //Coesfeld, North-Rhine-Westphalia
+        CR, //Crailsheim, Baden-Württemberg
+        CT, //Cottbus, Saxony
+        CUX, //Cuxhaven, Lower Saxony
+        CW, //Calw, Baden-Württemberg
+        D, //Düsseldorf, North-Rhine-Westphalia
+        DA, //Darmstadt & Darmstadt-Dieburg, Hesse
+        DAH, //Dachau, Bavaria
+        DAN, //Lüchow-Dannenberg, Lower Saxony
+        DAU, //Daun, Rhineland Palatinate
+        DB, //Rail authority vehicles (Deutsche Bundesbahn)
+        DBR, //Bad Doberan, Mecklenburg-Vorpommern
+        DD, //Dresden
+        DE, //Dessau, Saxony-Anhalt
+        DEG, //Deggendorf, Bavaria
+        DEL, //Delmenhorst, Lower Saxony
+        DG, //Donaueschingen, Baden-Württemberg
+        DGF, //Dingolfing-Landau, Bavaria
+        DH, //Diepholz, Lower Saxony
+        DI, //Dieburg, Hesse
+        DIL, //Dillenburg, Hesse
+        DIN, //Dinslaken, North-Rhine-Westphalia
+        DIZ, //Diez, Rhineland Palatinate
+        DKB, //Dinkelsbühl, Bavaria
+        DL, //Döbeln, Saxony
+        DLG, //Dillingen an der Donau, Bavaria
+        DM, //Demmin, Mecklenburg-Vorpommern
+        DN, //Düren, North-Rhine-Westphalia
+        DO, //Dortmund, North-Rhine-Westphalia
+        DON, //Donau-Ries, Bavaria
+        DS, //Donaueschingen, Baden-Württemberg
+        DT, //Detmold & Lippe, North-Rhine-Westphalia
+        DU, //Duisburg, North-Rhine-Westphalia
+        DUD, //Duderstadt, Lower Saxony
+        DÜW, //Bad Dürkheim & Weinstraße, Rhineland Palatinate
+        DW, //Dippoldiswalde & Weißeritzkreis, Saxony
+        DZ, //Delitzsch, Saxony
+        E, //Essen, North-Rhine-Westphalia
+        EA, //Eisenach, Thuringia
+        EB, //Eilenburg, Saxony
+        EBE, //Ebersberg, Bavaria
+        EBN, //Ebern, Bavaria
+        EBS, //Ebermannstadt, Bavaria
+        ECK, //Eckernförde, Schleswig-Holstein
+        ED, //Erding, Bavaria
+        EE, //Elbe-Elster, Brandenburg
+        EF, //Erfurt, Thuringia
+        EG, //Eggenfelden, Bavaria
+        EH, //Eisenhüttenstadt, Brandenburg
+        EHI, //Ehingen, Baden-Württemberg
+        EI, //Eichstätt, Bavaria
+        EIC, //Eichsfeld, Thuringia
+        EIH, //Eichstätt, Bavaria
+        EIL, //Eisleben, Saxony-Anhalt
+        EIN, //Einbeck, Lower Saxony
+        EIS, //Eisenberg
+        EL, //Emsland, Lower Saxony
+        EM, //Emmendingen, Baden-Württemberg
+        EMD, //Emden, Lower Saxony
+        EMS, //Bad Ems & Rhein-Lahn-Kreis, Rhineland Palatinate
+        EN, //Ennepe-Ruhr-Kreis, North-Rhine-Westphalia
+        ER, //Erlangen, Bavaria
+        ERB, //Erbach & Oldenwaldkreis, Hesse
+        ERH, //Erlangen-Höchstadt, Bavaria
+        ERK, //Erkelenz, North-Rhine-Westphalia
+        ES, //Esslingen, Baden-Württemberg
+        ESA, //Eisenach, Thuringia
+        ESB, //Eschenbach, Bavaria
+        ESW, //Eschwege & Werra-Meißner-Kreis, Hesse
+        EU, //Euskirchen, North-Rhine-Westphalia
+        EUT, //Eutin, Schleswig-Holstein
+        EW, //Eberswalde, Brandenburg
+        F, //Frankfurt am Main, Hesse
+        FAL, //Fallingbostel, North-Rhine-Westphalia
+        FB, //Friedberg (Hessen) & Wetteraukreis, Hesse
+        FD, //Fulda, Hesse
+        FDB, //Friedberg bei Augsburg, Bavaria
+        FDS, //Freudenstadt, Baden-Württemberg
+        FEU, //Feuchtwangen, Bavaria
+        FF, //Frankfurt-an-der-Oder, Brandenburg
+        FFB, //Fürstenfeldbruck, Bavaria
+        FG, //Freiberg, Saxony
+        FH, //Frankfurt am Main/Höchst, Hesse
+        FI, //Finsterwalde, Brandenburg
+        FKB, //Frankenberg, Hesse
+        FL, //Flensburg, Schleswig-Holstein
+        FLÖ, //Flöha, Saxony
+        FN, //Friedrichshafen & Bodenseekreis, Baden-Württemberg
+        FO, //Forchheim, Bavaria
+        FOR, //Forst, Brandenburg
+        FR, //Freiburg im Breisgau & Breisgau-Hochschwarzwald, Baden-Württemberg
+        FRG, //Freyung-Grafenau, Bavaria
+        FRI, //Friesland, Lower Saxony
+        FRW, //Bad Freienwalde, Brandenburg
+        FS, //Freising, Bavaria
+        FT, //Frankenthal (Pfalz), Rhineland Palatinate
+        FTL, //Freital, Saxony
+        FÜ, //Fürth, Bavaria
+        FÜS, //Füssen, Bavaria
+        FW, //Fürstenwalde, Brandenburg
+        FZ, //Fritzlar, Hesse
+        G, //Gera, Thuringia
+        GA, //Gardelegen, Saxony Anhalt
+        GAN, //Bad Gandersheim, Lower Saxony
+        GAP, //Garmisch-Partenkirchen, Bavaria
+        GC, //Glauchau & Chemnitzer Land, Saxony
+        GD, //Gmünd, Baden-Württemberg
+        GDB, //Gadesbusch, Mecklenburg-Vorpommern
+        GE, //Gelsenkirchen, North-Rhine-Westphalia
+        GEL, //Geldern, North-Rhine-Westphalia
+        GEM, //Gemünden, Bavaria
+        GEO, //Gerolzhofen, Bavaria
+        GER, //Germersheim, Rhineland Palatinate
+        GF, //Gifhorn, Lower Saxony
+        GG, //Groß-Gerau, Hesse
+        GHA, //Geithain, Saxony
+        GHC, //Gräfenhainichen, Saxony Anhalt
+        GI, //Gießen, Hesse
+        GK, //Geilenkirchen, North-Rhine-Westphalia
+        GL, //Bergisch-Gladbach & Rheinisch-Bergischer Kreis, North-Rhine-Westphalia
+        GLA, //Gladbeck, North-Rhine-Westphalia
+        GM, //Gummersbach & Oberbergischer Kreis, North-Rhine-Westphalia
+        GMN, //Grimmen, Mecklenburg-Vorpommern
+        GN, //Gelnhausen, Hesse
+        GNT, //Genthin, Saxony Anhalt
+        GÖ, //Göttingen, Lower Saxony
+        GOA, //St Goar, Rheinland Palatinate
+        GOH, //St Goarshausen, Rheinland Palatinate
+        GP, //Göppingen, Baden-Württemberg
+        GR, //Görlitz, Saxony
+        GRA, //Grafenau, Bavaria
+        GRH, //Grossenheim
+        GRI, //Griesbach, Bavaria
+        GRM, //Grimma, Saxony
+        GRS, //Gransee, Brandenburg
+        GRZ, //Greiz, Thuringia
+        GS, //Goslar, Lower Saxony
+        GT, //Gütersloh, North-Rhine-Westphalia
+        GTH, //Gotha, Thuringia
+        GÜ, //Güstrow, Mecklenburg-Vorpommern
+        GUB, //Guben, Brandenburg
+        GUN, //Gunzenhausen, Bavaria
+        GV, //Gravenbroich, North-Rhine-Westphalia
+        GVM, //Grevesmühlen, Mecklenburg-Vorpommern
+        GW, //Greifswald Land, Mecklenburg-Vorpommern
+        GZ, //Günzburg, Bavaria
+        H, //Hanover (Hannover), Lower Saxony
+        HA, //Hagen, North-Rhine-Westphalia
+        HAB, //Hammelburg, Bavaria
+        HAL, //Halle, Saxony-Anhalt
+        HAM, //Hamm, North-Rhine-Westphalia
+        HAS, //Haßberge, Bavaria
+        HB, //Hansestadt Bremen
+        HBN, //Hildburghausen, Thuringia
+        HBS, //Halberstadt, Saxony-Anhalt
+        HC, //Hainichen, Saxony
+        HCH, //Hechingen, Baden-Württemberg
+        HD, //Heidelberg & Rhein-Neckar-Kreis, Baden-Württemberg
+        HDH, //Heidenheim, Baden-Württemberg
+        HDL, //Haldensleben, Saxony Anhalt
+        HE, //Helmstedt, Lower Saxony
+        HEB, //Hersbruck, Bavaria
+        HEF, //Hersfeld-Rotenburg, Hesse
+        HEI, //Heide & Dithmarschen, Schleswig-Holstein
+        HEL, //Hesse State (Hesse Land) official vehicles
+        HER, //Herne, North-Rhine-Westphalia
+        HET, //Hettstedt, Saxony Anhalt
+        HF, //Herford, North-Rhine-Westphalia
+        HG, //Bad Homburg vor der Höhe & Hochtaunuskreis, Hesse
+        HGN, //Hagenow, Mecklenburg-Vorpommern
+        HGW, //Hansestadt Greifswald, Mecklenburg-Vorpommern
+        HH, //Hansestadt Hamburg
+        HHM, //Hohenmölsen, Saxony Anhalt
+        HI, //Hildesheim, Lower Saxony
+        HIG, //Heiligenstadt, Thuringia
+        HIP, //Hilpoltstein, Bavaria
+        HK, //Heidekreis, Lower Saxony
+        HL, //Hansestadt Lübeck
+        HM, //Hamelin(Hameln)-Pyrmont, Lower Saxony
+        HMU, //Hanoversch Münden, Lower Saxony
+        HN, //Heilbronn, Baden-Württemberg
+        HO, //Hof, Bavaria
+        HOG, //Hofgeismar, Hesse
+        HOH, //Hofheim, Bavaria
+        HOL, //Holzminden, Lower Saxony
+        HOM, //Homburg & Saar-Pfalz-Kreis, Saarland
+        HOR, //Horb, Baden-Württemberg
+        HÖS, //Höchstadt, Bavaria
+        HOT, //Hohenstein-Ernstthal, Saxony
+        HP, //Heppenheim an der Bergstraße & Bergstraße, Hesse
+        HR, //Homberg & Schwalm-Eder-Kreis, Hesse
+        HRO, //Hansestadt Rostock, Mecklenburg-Vorpommern
+        HS, //Heinsberg, North-Rhine-Westphalia
+        HSK, //Hochsauerlandkreis, North-Rhine-Westphalia
+        HST, //Hansestadt Stralsund, Mecklenburg-Vorpommern
+        HU, //Hanau & Main-Kinzig-Kreis, Hesse
+        HÜN, //Hünfeld, Schleswig-Holstein
+        HUS, //Husum, Schleswig-Holstein
+        HV, //Havelberg, Saxony Anhalt
+        HVL, //Havelland, Brandenburg
+        HW, //Halle Westfalen, North-Rhine-Westphalia
+        HWI, //Hansestadt Wismar, Mecklenburg-Vorpommern
+        HX, //Höxter, North-Rhine-Westphalia
+        HY, //Hoyerswerda, Saxony
+        HZ, //Herzberg, Brandenburg
+        IGB, //Stadt St Ingbert & Saar-Pfalz-Kreis, Saarland
+        IK, //Ilm-Kreis, Thuringia
+        IL, //Ilmenau, Thuringia
+        ILL, //Illertissen, Bavaria
+        IN, //Ingolstadt, Bavaria
+        IS, //Iserlohn, North-Rhine-Westphalia
+        IZ, //Itzehoe & Steinburg, Schleswig-Holstein
+        J, //Jena, Thuringia
+        JB, //Jüterbog, Brandenburg
+        JE, //Jessen, Saxony Anhalt
+        JEV, //Jever, Lower Saxony
+        JL, //Jerichower Land, Saxony-Anhalt
+        JÜL, //Jülich, North-Rhine-Westphalia
+        K, //Cologne (Köln), North-Rhine-Westphalia
+        KA, //Karlsruhe, Baden-Württemberg
+        KAR, //Karlstadt, Bavaria
+        KB, //Korbach & Waldeck-Frankenberg, Hesse
+        KC, //Kronach, Bavaria
+        KE, //Kempten (Allgäu), Bavaria
+        KEH, //Kelheim, Bavaria
+        KEL, //Kehl, Baden-Württemberg
+        KEM, //Kemnath, Bavaria
+        KF, //Kaufbeuren, Bavaria
+        KG, //Bad Kissingen, Bavaria
+        KH, //Bad Kreuznach, Rhineland Palatinate
+        KI, //Kiel, Schleswig-Holstein
+        KIB, //Kirchheimbolanden & Donnersbergkreis, Rhineland Palatinate
+        KK, //Kempen-Krefeld, North-Rhine-Westphalia
+        KL, //Kaiserslauten, Rhineland Palatinate
+        KLE, //Cleves (Kleve), North-Rhine-Westphalia
+        KLT, //Klingental, Saxony
+        KLZ, //Klötze, Saxony Anhalt
+        KM, //Kamenz, Saxony
+        KN, //Constance (Konstanz), Baden-Württemberg
+        KO, //Koblenz, Rhineland Palatinate
+        KÖN, //Kötzting, Bavaria
+        KÖT, //Köthen, Saxony-Anhalt
+        KOZ, //Kotzting
+        KR, //Krefeld, North-Rhine-Westphalia
+        KRU, //Krumbach, Bavaria
+        KS, //Kassel, Hesse
+        KT, //Kitzingen, Bavaria
+        KU, //Kulmbach, Bavaria
+        KÜN, //Küzelsau & Hohenlohekreis, Baden-Württemberg
+        KUS, //Kusel, Rhineland Palatinate
+        KW, //Königs-Wusterhausen, Brandenburg
+        KY, //Kyritz, Brandenburg
+        KYF, //Kyffhäuserkreis, Thuringia
+        L, //Leipzig, Saxony
+        LA, //Landshut, Bavaria
+        LAN, //Landau Isar, Bavaria
+        LAT, //Lauterbach, Hesse
+        LAU, //Lauf an der Pegnitz & Nürnberger Land, Bavaria
+        LB, //Ludwigsburg, Baden-Württemberg
+        LBS, //Lobenstein, Thuringia
+        LBZ, //Lübz, Mecklenburg-Vorpommern
+        LC, //Luckau, Brandenburg
+        LD, //Landau in der Pfalz, Rhineland Palatinate
+        LDK, //Lahn-Dill-Kreis, Hesse
+        LDS, //Landkreis Dahme-Spreewald, Brandenburg
+        LE, //Lemgo, North-Rhine-Westphalia
+        LEO, //Leonberg, Baden-Württemberg
+        LER, //Leer (Ostfriesland), Lower Saxony
+        LEV, //Leverkusen, North-Rhine-Westphalia
+        LF, //Laufen, Bavaria
+        LG, //Lüneburg, Lower Saxony
+        LH, //Lüdinghausen, North-Rhine-Westphalia
+        LI, //Lindau (Bodensee), Bavaria
+        LIB, //Bad Liebenwerda, Brandenburg
+        LIF, //Lichtenfels, Bavaria
+        LIN, //Lingen, Lower Saxony
+        LIP, //Lippe, North-Rhine-Westphalia
+        LK, //Lübbecke, North-Rhine-Westphalia
+        LL, //Landsberg am Lech, Bavaria
+        LM, //Limburg-Weilburg, Hesse
+        LN, //Lübben, Brandenburg
+        LÖ, //Lörrach, Baden-Württemberg
+        LÖB, //Löbau, Saxony
+        LOH, //Lohr am Main, Bavaria
+        LOS, //Landkreis Oder-Spree, Brandenburg
+        LP, //Lippstadt, North-Rhine-Westphalia
+        LR, //Lahr, Baden-Württemberg
+        LS, //Lüdenscheid, North-Rhine-Westphalia
+        LSA, //Saxony Anhalt State official vehicles
+        LSN, //Saxony State official vehicles
+        LSZ, //Bad Langensalza, Thuringia
+        LU, //Ludwigshafen am Rhein, Rhineland Palatinate
+        LÜD, //Lüdenscheid, North-Rhine-Westphalia
+        LUK, //Luckenwalde, Brandenburg
+        LÜN, //Lünen, North-Rhine-Westphalia
+        LWL, //Ludwigslust, Mecklenburg-Vorpommern
+        M, //Munich (München), Bavaria
+        MA, //Mannheim, Baden-Württemberg
+        MAB, //Marienberg, Saxony
+        MAI, //Mainburg, Bavaria
+        MAK, //Marktredwitz, Bavaria
+        MAL, //Mallersdorf, Bavaria
+        MAR, //Marktheidenfeld, Bavaria
+        MB, //Miesbach, Bavaria
+        MC, //Malchin, Mecklenburg-Vorpommern
+        MD, //Magdeburg, Saxony-Anhalt
+        ME, //Mettmann, North-Rhine-Westphalia
+        MED, //Meldorf, Schleswig-Holstein
+        MEG, //Melsungen, Hesse
+        MEI, //Meissen, Saxony
+        MEK, //Mittlerer Erzgebirgskreis, Saxony
+        MEL, //Melle, Lower Saxony
+        MEP, //Meppen, Lower Saxony
+        MER, //Merseburg, Saxony Anhalt
+        MES, //Meschede, North-Rhine-Westphalia
+        MET, //Mellrichstadt, Bavaria
+        MG, //Mönchengladbach, North-Rhine-Westphalia
+        MGH, //Bad Mergentheim, Baden-Württemberg
+        MGN, //Meiningen, Thuringia
+        MH, //Mülheim an der Ruhr, North-Rhine-Westphalia
+        MHL, //Mühlhausen
+        MI, //Minden-Lübbecke, North-Rhine-Westphalia
+        MIL, //Miltenberg, Bavaria
+        MK, //Märkischer Kreis, North-Rhine-Westphalia
+        MKK, //Main-Kinzig-Kreis, Hessen
+        ML, //Mansfelder Land, Saxony-Anhalt
+        MM, //Memmingen, Bavaria
+        MN, //Mindelheim & Unterallgäu, Bavaria
+        MO, //Moers, North-Rhine-Westphalia
+        MOD, //Marktoberdorf, Bavaria
+        MOL, //Märkisch-Oderland, Brandenburg
+        MON, //Monschau, North-Rhine-Westphalia
+        MOS, //Mosbach & Neckar-Odenwald-Kreis, Baden-Württemberg
+        MQ, //Merseburg-Querfurt, Saxony-Anhalt
+        MR, //Marburg-Biedenkopf, Hesse
+        MS, //Münster, North-Rhine-Westphalia
+        MSP, //Main-Spessart-Kreis, Bavaria
+        MST, //Mecklenburg-Strelitz, Mecklenburg-Vorpommern
+        MT, //Montabaur, Rhineland Palatinate
+        MTK, //Main-Taunus-Kreis, Hesse
+        MTL, //Muldentalkreis, Saxony
+        MÜ, //Mühldorf am Inn, Bavaria
+        MÜB, //Münchberg, Bavaria
+        MÜL, //Müllheim, Baden-Württemberg
+        MÜN, //Münsingen, Baden-Württemberg
+        MÜR, //Müritz, Mecklenburg-Vorpommern
+        MVL, //Mecklenburg-Vorpommern Land official vehicles
+        MW, //Mittweida, Saxony
+        MY, //Mayen, Rhineland Palatinate
+        MYK, //Mayen-Koblenz, Rhineland Palatinate
+        MZ, //Mainz & Mainz-Bingen, Rhineland Palatinate
+        MZG, //Merzig-Wadern, Saarland
+        N, //Nuremberg (Nürnberg), Bavaria
+        NAB, //Nabburg, Bavaria
+        NAI, //Naila, Bavaria
+        NAU, //Nauen, Brandenburg
+        NB, //Neubrandenburg, Mecklenburg-Vorpommern
+        ND, //Neuberg an der Donau & Neuberg-Schrobenhausen, Bavaria
+        NDH, //Nordhausen, Thuringia
+        NE, //Neuss, North-Rhine-Westphalia
+        NEA, //Neustadt an der Aisch & Bad Windsheim, Bavaria
+        NEB, //Nebra, Saxony Anhalt
+        NEC, //Neustadt Coburg, Bavaria
+        NEN, //Neunburg, Bavaria
+        NES, //Bad Neustadt an der Saale & Rhön-Grabfeld, Bavaria
+        NEU, //Neustadt Schwarzwald, Baden-Württemberg
+        NEW, //Neustadt an der Waldnaab, Bavaria
+        NF, //Nordfriesland, Schleswig-Holstein
+        NH, //Neuhaus an der Rennweg, Thuringia
+        NI, //Nienberg (Weser), Lower Saxony
+        NIB, //Niebüll, Schleswig-Holstein
+        NK, //Neunkirchen/Saar, Saarland
+        NL, //Lower Saxony State official vehicles
+        NM, //Neumarkt in der Oberpfalz, Bavaria
+        NMB, //Naumberg, Saxony Anhalt
+        NMS, //Neumünster, Schleswig-Holstein
+        NÖ, //Nördlingen, Bavaria
+        NOH, //Nordhorn & Grafschaft Bentheim, Lower Saxony
+        NOL, //Niederschlesischer Oberlausitzkreis, Saxony
+        NOM, //Northeim, Lower Saxony
+        NOR, //Norden, Lower Saxony
+        NP, //Neuruppin, Brandenburg
+        NR, //Neuwied am Rhein, Rhineland Palatinate
+        NRÜ, //Neustadt am Rübenberge, Lower Saxony
+        NRW, //North-Rhine-Westphalia State official vehicles
+        NU, //Neu-Ulm, Bavaria
+        NT, //Nürtingen, Baden-Württemberg
+        NVP, //Nordvorpommern, Mecklenburg-Vorpommern
+        NW, //Neustadt an der Weinstraße, Rhineland Palatinate
+        NWM, //Nordwestmecklenburg, Mecklenburg-Vorpommern
+        NY, //Niesky, Saxony
+        NZ, //Neustrelitz, Mecklenburg-Vorpommern
+        OA, //Oberallgäu, Bavaria
+        OAL, //Ostallgäu, Bavaria
+        OB, //Oberhausen, North-Rhine-Westphalia
+        OBB, //Obernburg, Bavaria
+        OBG, //Osterburg, Saxony Anhalt
+        OC, //Oschersleben, Saxony
+        OCH, //Ochsenfurt, Bavaria
+        OD, //Bad Oldesloe & Stormarn, Schleswig-Holstein
+        OE, //Olpe, North-Rhine-Westphalia
+        OF, //Offenbach am Main, Hesse
+        OG, //Offenburg & Ortenaukreis, Baden-Württemberg
+        OH, //Ostholstein, Schleswig-Holstein
+        OHA, //Osterode am Harz, Lower Saxony
+        ÖHR, //Öhringen, Baden-Württemberg
+        OHV, //Oberhavel, Brandenburg
+        OHZ, //Osterholz, Lower Saxony
+        OK, //Ohre-Kreis, Saxony-Anhalt
+        OL, //Oldenburg, Lower Saxony
+        OLD, //Oldenburg (Holstein), Schleswig-Holstein
+        OP, //Opladen, North-Rhine-Westphalia
+        OPR, //Ostprignitz-Ruppin, Brandenburg
+        OR, //Oranienburg, Brandenburg
+        OS, //Osnabrück, Lower Saxony
+        OSL, //Oberspreewald-Lausitz, Brandenburg
+        OTT, //Otterndorf, Lower Saxony
+        OTW, //Ottweiler, Saarland
+        OVI, //Oberviechtach, Bavaria
+        OVL, //Obervogtland, Saxony
+        OVP, //Ostvorpommern, Mecklenburg-Vorpommern
+        OZ, //Oschatz, Saxony
+        P, //Potsdam, Brandenburg
+        PA, //Passau, Bavaria
+        PAF, //Pfaffenhofen an der Ilm, Bavaria
+        PAN, //Pfarrkirchen & Rottal-Inn, Bavaria
+        PAR, //Parsberg, Bavaria
+        PB, //Paderborn, North-Rhine-Westphalia
+        PCH, //Parchim, Mecklenburg-Vorpommern
+        PE, //Peine, Lower Saxony
+        PEG, //Pegnitz, Bavraia
+        PER, //Perleberg, Brandenburg
+        PF, //Pforzheim & Enzkreis, Baden-Württemberg
+        PI, //Pinneberg, Schleswig-Holstein
+        PIR, //Pirna, Saxony
+        PK, //Pritzwalk, Brandenburg
+        PL, //Plauen, Saxony
+        PLÖ, //Plön, Schleswig-Holstein
+        PM, //Potsdam-Mittelmark, Brandenburg
+        PN, //Pößneck, Thuringia
+        PR, //Prignitz, Brandenburg
+        PRÜ, //Prüm, Rhineland Palatinate
+        PS, //Pirmasens & Südwestpfalz, Rhineland Palatinate
+        PW, //Pasewalk, Mecklenburg-Vorpommern
+        PZ, //Prenzlau, Brandenburg
+        QFT, //Querfurt, Saxony Anhalt
+        QLB, //Quedlinburg, Saxony-Anhalt
+        R, //Regensberg, Bavaria
+        RA, //Ratstatt, Baden-Württemberg
+        RC, //Reichenbach, Saxony
+        RD, //Rendsburg-Eckernförde, Schleswig-Holstein
+        RDG, //Ribnitz-Damgarten, Mecklenburg-Vorpommern
+        RE, //Recklinghausen, North-Rhine-Westphalia
+        REG, //Regen, Bavaria
+        REH, //Rehau, Bavaria
+        REI, //Bad Reichenhall, Bavaria
+        RG, //Riesa-Großenhain, Saxony
+        RH, //Roth bei Nürnberg, Bavaria
+        RI, //Rinteln, Lower Saxony
+        RID, //Riedenburg, Bavaria
+        RIE, //Riesa, Saxony
+        RL, //Rochlitz, Saxony
+        RM, //Röbel/Muritz, Mecklenburg-Vorpommern
+        RN, //Rathenow, Brandenburg
+        RO, //Rosenheim, Bavaria
+        ROD, //Roding, Bavaria
+        ROF, //Rotenburg bei Fulda, Hesse
+        ROH, //Rotenburg Wümme, Lower Saxony
+        ROK, //Rockenhausen, Rhineland Palatinate
+        ROL, //Rottenburg Laaber, Bavaria
+        ROS, //Rostock Land, Mecklenburg-Vorpommern
+        ROT, //Rothenburg ob der Tauber, Bavaria
+        ROW, //Rotenburg (Wümme) & Bremervörde, Lower Saxony
+        RPL, //Rhineland Palatinate State official vehicles
+        RS, //Remscheid, North-Rhine-Westphalia
+        RSL, //Roßlau, Saxony Anhalt
+        RT, //Reutlingen, Baden-Württemberg
+        RU, //Rudolstadt
+        RÜD, //Rüdesheim & Rheingau-Taunus-Kreis, Hesse
+        RÜG, //Rügen, Mecklenburg-Vorpommern
+        RV, //Ravensburg, Baden-Württemberg
+        RW, //Rottweil, Baden-Württemberg
+        RWL, //North-Rhine-Westphalia State official vehicles
+        RY, //Rheydt, North-Rhine-Westphalia
+        RZ, //Ratzeburg & Hertzogtum Lauenburg, Schleswig-Holstein
+        S, //Stuttgart, Baden-Württemberg
+        SAB, //Saarburg, Rhineland Palatinate
+        SAD, //Schwandorf, Bavaria
+        SÄK, //Säckingen, Baden-Württemberg
+        SAL, //Saarland official vehicles
+        SAN, //Stadtsteinach, Bavaria
+        SAO, //Saale-Orla Kreis
+        SAW, //Altmarkkreis Salzwedel, Saxony-Anhalt
+        SB, //Saarbrücken, Saarland
+        SBG, //Strasburg, Mecklenburg-Vorpommern
+        SBK, //Schönebeck, Saxony-Anhalt
+        SC, //Schwabach, Bavaria
+        SCZ, //Schleiz, Thuringia
+        SDH, //Sondershausen, Thuringia
+        SDL, //Stendal, Saxony-Anhalt
+        SDT, //Schwedt, Brandenburg
+        SE, //Segeberg, Schleswig-Holstein
+        SEB, //Sebnitz, Saxony
+        SEE, //Seelow, Brandenburg
+        SEF, //Scheinfeld, Bavaria
+        SEL, //Selb, Bavaria
+        SF, //Sonthofen, Bavaria
+        SFA, //Soltau-Fallingbostel, Lower Saxony
+        SFB, //Senftenberg, Brandenburg
+        SFT, //Staßfurt, Saxony Anhalt
+        SG, //Solingen, North-Rhine-Westphalia
+        SGH, //Sangerhausen, Saxony-Anhalt
+        SH, //Schleswig-Holstein Land official vehicles
+        SHA, //Schwäbisch Hall, Baden-Württemberg
+        SHG, //Stadthagen & Schaumburg, Lower Saxony
+        SHK, //Saale-Holzland-Kreis, Thuringia
+        SHL, //Suhl, Thuringia
+        SHS, //Sangerhausen
+        SI, //Siegen-Wittgenstein, North-Rhine-Westphalia
+        SIG, //Sigmaringen, Baden-Württemberg
+        SIM, //Simmern & Rhein-Hunsrück-Kreis, Rhineland Palatinate
+        SK, //Saalkreis, Saxony-Anhalt
+        SL, //Schleswig-Flensburg, Schleswig-Holstein
+        SLE, //Schleiden (Eifel), North-Rhine-Westphalia
+        SLF, //Saalfeld-Rudolstadt, Thuringia
+        SLG, //Saulgau, Baden-Württemberg
+        SLK, //Salzlandkreis, Saxony-Anhalt
+        SLN, //Schmölin, Thuringia
+        SLS, //Saarlouis, Saarland
+        SLÜ, //Schlüchtern, Hesse
+        SLZ, //Bad Salzungen, Thuringia
+        SM, //Schmalkalden-Meiningen, Thuringia
+        SMÜ, //Schwabmünchen, Bavaria
+        SN, //Schwerin, Mecklenburg-Vorpommern
+        SNH, //Sinsheim, Baden-Württemberg
+        SO, //Soest, North-Rhine-Westphalia
+        SOB, //Schrobenhausen, Bavaria
+        SOG, //Schongau, Bavaria
+        SOK, //Saale-Orla-Kreis, Thuringia
+        SOL, //Soltau, Lower Saxony
+        SÖM, //Sömmerda, Thuringia
+        SON, //Sonneberg, Thuringia
+        SP, //Speyer, Rhineland Palatinate
+        SPB, //Spremberg, Brandenburg
+        SPN, //Spree-Neiße, Brandenburg
+        SPR, //Springe, Lower Saxony
+        SR, //Straubing & Straubing-Bogen, Bavaria
+        SRB, //Strausberg, Brandenburg
+        SRO, //Stadtroda, Thuringia
+        ST, //Steinfurt, North-Rhine-Westphalia
+        STA, //Starnberg, Bavaria
+        STB, //Sternberg, Mecklenburg-Vorpommern
+        STD, //Stade, Lower Saxony
+        STE, //Staffelstein, Bavaria
+        STH, //Stadthagen, Lower Saxony
+        STL, //Stollberg, Saxony
+        STO, //Stockach, Baden-Württemberg
+        SU, //Siegburg & Rhein-Sieg-Kreis, North-Rhine-Westphalia
+        SUL, //Sulzbach-Rosenberg, Bavaria
+        SÜW, //Südliche Weinstraße, Rhineland Palatinate
+        SW, //Schweinfurt, Bavaria
+        SWA, //Bad Schwalbach & Rheingau-Taunus-Kreis, Hesse
+        SWZ, //Schwarzakreis
+        SY, //Syke, Lower Saxony
+        SZ, //Salzgitter, Lower Saxony
+        SZB, //Schwarzenberg, Saxony
+        TBB, //Tauberbischofsheim & Main-Tauber-Kreis, Baden-Württemberg
+        TE, //Teterow, Mecklenburg-Vorpommern
+        TF, //Teltow-Fläming, Brandenburg
+        TG, //Torgau, Saxony
+        TGO, //Thurgau-Oschatz
+        THL, //Thuringia State (Thüringen Land) official vehicles
+        THW, //German Federal Agency for Technical Relief vehicles
+        TIR, //Tirschenreuth, Bavaria
+        TO, //Torgau-Oschatz, Saxony
+        TÖL, //Bad Tölz-Wolfratshausen, Bavaria
+        TÖN, //Tönning, Schleswig-Holstein
+        TP, //Templin, Brandenburg
+        TR, //Trier, Rhineland Palatinate
+        TS, //Traunstein, Bavaria
+        TT, //Tettnang, Baden-Württemberg
+        TÜ, //Tübingen, Baden-Württemberg
+        TUT, //Tuttlingen, Baden-Württemberg
+        ÜB, //Überlingen, Baden-Württemberg
+        UE, //Uelzen, Lower Saxony
+        UEM, //Ueckermünde, Mecklenburg-Vorpommern
+        UER, //Uecker-Randow, Mecklenburg-Vorpommern
+        UFF, //Uffenheim, Bavaria
+        UH, //Unstrut-Hainich, Thuringia
+        UL, //Ulm & Alb-Donau-Kreis, Baden-Württemberg
+        UM, //Uckermark, Brandenburg
+        UN, //Unna, North-Rhine-Westphalia
+        USI, //Usingen, Hesse
+        V, //Vogtlandkreis, Saxony
+        VAI, //Vaihingen, Baden-Württemberg
+        VB, //Vogelsbergkreis, Hesse
+        VEC, //Vechta, Lower Saxony
+        VER, //Verden, Lower Saxony
+        VIB, //Vilsbiburg, Bavaria
+        VIE, //Viersen, North-Rhine-Westphalia
+        VIT, //Viechtach, Bavaria
+        VK, //Völklingen, Saarland
+        VL, //Villingen, Baden-Württemberg
+        VOF, //Vilshofen, Bavaria
+        VOH, //Vohenstrauß, Bavaria
+        VR, //Vorpommern-Rügen, Mecklenburg-Vorpommern
+        VS, //Villingen-Schwenningen & Schwarzwald-Baar-Kreis, Baden-Württemberg
+        W, //Wuppertal, North-Rhine-Westphalia
+        WA, //Waldeck, Hesse
+        WAF, //Kreis Warendorf, North-Rhine-Westphalia
+        WAK, //Wartburgkreis, Thuringia
+        WAM, //Westliche Altmark
+        WAN, //Wanne-Eickel, North-Rhine-Westphalia
+        WAR, //Warburg, North-Rhine-Westphalia
+        WAT, //Wattenscheid, North-Rhine-Westphalia
+        WB, //Wittenberg, Saxony-Anhalt
+        WBS, //Worbis, Thuringia
+        WD, //Weidenbrück, North-Rhine-Westphalia
+        WDA, //Werdau, Saxony
+        WE, //Weimar, Thuringia
+        WEB, //Westerburg, Rhineland Palatinate
+        WEG, //Wegscheid, Bavaria
+        WEI, //Weimarer Land (Kreis Apolda)
+        WEL, //Weilburg, Hesse
+        WEM, //Wesermünde, Lower Saxony
+        WEN, //Weiden in der Oberpfalz, Bavaria
+        WER, //Wertingen, Bavaria
+        WES, //Wesel, North-Rhine-Westphalia
+        WF, //Wolfenbüttel, Lower Saxony
+        WG, //Wangen, Baden-Württemberg
+        WHV, //Wilhelmshaven, Lower Saxony
+        WI, //Wiesbaden, Hesse
+        WIL, //Wittlich & Bernkastel-Wittlich, Rhineland Palatinate
+        WIS, //Wismarer Land
+        WIT, //Witten, North-Rhine-Westphalia
+        WIZ, //Witzenhausen, Hesse
+        WK, //Wittstock, Brandenburg
+        WL, //Winsen (Luhe) & Harburg, Lower Saxony
+        WLG, //Wolgast, Mecklenburg-Vorpommern
+        WM, //Weilheim-Schongau, Bavaria
+        WMS, //Wolmirstedt, Saxony Anhalt
+        WN, //Waiblingen & Rems-Murr-Kreis, Baden-Württemberg
+        WND, //St Wendel, Saarland
+        WO, //Worms, Rhineland Palatinate
+        WOB, //Wolfsburg, Lower Saxony
+        WOH, //Wolfhagen, Hesse
+        WOL, //Wolfach, Baden-Württemberg
+        WOR, //Wolfratshausen, Bavaria
+        WOS, //Wolfstein, Bavaria
+        WR, //Wernigerode, Saxony-Anhalt
+        WRN, //Waren, Mecklenburg-Vorpommern
+        WS, //Wasserburg, Bavaria
+        WSF, //Weißenfels, Saxony-Anhalt
+        WST, //Westerstede & Ammerland, Lower Saxony
+        WSW, //Weißwasser, Saxony
+        WT, //Waldshut, Baden-Württemberg
+        WTL, //Wittlage, Lower Saxony
+        WTM, //Wittmund, Lower Saxony
+        WÜ, //Würzburg, Bavaria
+        WUG, //Weißenburg-Gunzenhausen, Bavaria
+        WUM, //Waldmünchen, Bavaria
+        WUN, //Wunsiedel am Fichtelgebirge, Bavaria
+        WUR, //Wurzen, Saxony
+        WW, //Westerwaldkreis, Rhineland Palatinate
+        WZ, //Wetzlar, Hesse
+        WZL, //Wanzleben, Saxony Anhalt
+        Z, //Zwickauer Land, Saxony
+        ZE, //Zerbst, Saxony-Anhalt
+        ZEL, //Zell, Rhineland Palatinate
+        ZI, //Löbau-Zittau
+        ZIG, //Ziegenhain, Hesse
+        ZP, //Zschopau, Saxony
+        ZR, //Zeulenroda, Thuringia
+        ZS, //Zossen, Brandenburg
+        ZW, //Zweibrücken, Rhineland Palatinate
+        ZZ, //Zeitz, Saxony Anhalt
     }
 }

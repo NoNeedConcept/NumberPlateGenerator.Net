@@ -4,6 +4,6 @@ namespace NumberPlateGenerator.Net.Core.Settings
 {
     public class DSettings : SettingsBase<DProvinces>
     {
-
+        
     }
 }
